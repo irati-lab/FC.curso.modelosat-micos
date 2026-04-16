@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboratorio Virtual: El Átomo</title>
+    <title>Laboratorio virtual: el átomo</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome -->
@@ -18,7 +18,7 @@
                     fontFamily: { sans: ['Nunito', 'sans-serif'] },
                     colors: {
                         brand: {
-                            purple: '#7e57c2', // Ajustado al tono de tu imagen
+                            purple: '#7e57c2', 
                             purpleDark: '#5e35b1',
                             bg: '#f8f9fa'
                         }
@@ -36,7 +36,7 @@
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
 
-        /* --- SIDEBAR Y EFECTO DE PESTAÑA ACTIVA (Como en tu imagen) --- */
+        /* --- SIDEBAR Y EFECTO DE PESTAÑA ACTIVA --- */
         .sidebar { background-color: #7e57c2; }
         
         .nav-item {
@@ -57,15 +57,15 @@
 
         /* Efecto de recorte blanco para la pestaña activa */
         .nav-item.active {
-            background-color: #f8f9fa; /* Color del fondo principal */
+            background-color: #f8f9fa; 
             color: #7e57c2;
             border-top-left-radius: 30px;
             border-bottom-left-radius: 30px;
-            margin-left: 15px; /* Empuja hacia la derecha */
+            margin-left: 15px; 
             width: calc(100% - 15px);
         }
 
-        /* Curvas suaves arriba y abajo de la pestaña activa usando pseudo-elementos */
+        /* Curvas suaves arriba y abajo de la pestaña activa */
         .nav-item.active::before, .nav-item.active::after {
             content: '';
             position: absolute;
@@ -93,7 +93,6 @@
         .timeline-item { cursor: pointer; transition: all 0.2s; }
         .timeline-item.active { border-color: #7e57c2; background-color: #f3e8ff; }
         
-        /* Simbolo Químico grande */
         .chemical-symbol { font-family: 'Times New Roman', serif; }
     </style>
 </head>
@@ -106,18 +105,18 @@
             <i class="fa-solid fa-atom text-white text-3xl"></i>
         </div>
         
-        <!-- Menú de navegación (Las páginas) -->
+        <!-- Menú de navegación -->
         <div class="flex flex-col w-full">
             <div class="nav-item active" onclick="switchTab('inicio', this)" title="Inicio">
                 <i class="fa-solid fa-house"></i>
             </div>
-            <div class="nav-item" onclick="switchTab('historia', this)" title="Línea de Tiempo">
+            <div class="nav-item" onclick="switchTab('historia', this)" title="Línea de tiempo">
                 <i class="fa-solid fa-clock-rotate-left"></i>
             </div>
-            <div class="nav-item" onclick="switchTab('laboratorio', this)" title="Laboratorio de Iones e Isótopos">
+            <div class="nav-item" onclick="switchTab('laboratorio', this)" title="Laboratorio de isótopos e iones">
                 <i class="fa-solid fa-microscope"></i>
             </div>
-            <div class="nav-item" onclick="switchTab('actividades', this)" title="Actividades y Dudas">
+            <div class="nav-item" onclick="switchTab('actividades', this)" title="Actividades y dudas">
                 <i class="fa-solid fa-gamepad"></i>
             </div>
         </div>
@@ -129,7 +128,7 @@
         <!-- HEADER COMÚN -->
         <header class="flex justify-between items-center mb-8 border-b border-gray-200 pb-4">
             <div>
-                <h1 class="text-3xl font-bold text-gray-800" id="page-title">Bienvenido al Laboratorio</h1>
+                <h1 class="text-3xl font-bold text-gray-800" id="page-title">Bienvenido al laboratorio</h1>
                 <p class="text-gray-500" id="page-subtitle">Sigue los pasos para completar la unidad.</p>
             </div>
             <div class="flex items-center gap-3 bg-white py-2 px-5 rounded-full shadow-sm border border-gray-100">
@@ -150,7 +149,7 @@
                         <i class="fa-solid fa-rocket"></i>
                     </div>
                     <div>
-                        <h2 class="text-3xl font-bold text-gray-800">Tu Misión Científica</h2>
+                        <h2 class="text-3xl font-bold text-gray-800">Tu misión científica</h2>
                         <p class="text-gray-600 mt-2 text-lg">Antes de nuestra próxima sesión, debes comprender cómo está formada la materia. Sigue este plan de trabajo a tu propio ritmo.</p>
                     </div>
                 </div>
@@ -158,26 +157,26 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 relative">
                         <div class="absolute -top-4 -left-4 w-8 h-8 bg-brand-purple text-white rounded-full flex items-center justify-center font-bold shadow-md">1</div>
-                        <h3 class="font-bold text-xl mb-3 text-brand-purple"><i class="fa-solid fa-clock-rotate-left mr-2"></i>La Historia</h3>
+                        <h3 class="font-bold text-xl mb-3 text-brand-purple"><i class="fa-solid fa-clock-rotate-left mr-2"></i>La historia</h3>
                         <p class="text-sm text-gray-600">Explora la línea temporal. Lee atentamente qué aportó cada científico y en qué se equivocaron. La ciencia avanza corrigiendo errores.</p>
                     </div>
 
                     <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 relative">
                         <div class="absolute -top-4 -left-4 w-8 h-8 bg-brand-purple text-white rounded-full flex items-center justify-center font-bold shadow-md">2</div>
-                        <h3 class="font-bold text-xl mb-3 text-brand-purple"><i class="fa-solid fa-microscope mr-2"></i>El Laboratorio</h3>
-                        <p class="text-sm text-gray-600">Interactúa con los protones, neutrones y electrones. Descubre por ti mismo cómo se forma un Catión, un Anión y qué son los Isótopos.</p>
+                        <h3 class="font-bold text-xl mb-3 text-brand-purple"><i class="fa-solid fa-microscope mr-2"></i>El laboratorio</h3>
+                        <p class="text-sm text-gray-600">Interactúa con los protones, neutrones y electrones. Descubre por ti mismo cómo se forma un catión, un anión y qué son los isótopos.</p>
                     </div>
 
                     <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 relative">
                         <div class="absolute -top-4 -left-4 w-8 h-8 bg-brand-purple text-white rounded-full flex items-center justify-center font-bold shadow-md">3</div>
-                        <h3 class="font-bold text-xl mb-3 text-brand-purple"><i class="fa-solid fa-gamepad mr-2"></i>El Reto Final</h3>
+                        <h3 class="font-bold text-xl mb-3 text-brand-purple"><i class="fa-solid fa-gamepad mr-2"></i>El reto final</h3>
                         <p class="text-sm text-gray-600">Ponte a prueba con el cuestionario de 5 preguntas. Si tienes dudas, al final encontrarás un buzón directo a mi correo.</p>
                     </div>
                 </div>
 
                 <div class="mt-10 text-center">
                     <button onclick="document.querySelectorAll('.nav-item')[1].click()" class="bg-brand-purple text-white font-bold py-3 px-8 rounded-full hover:bg-brand-purpleDark transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                        ¡Comenzar la Aventura! <i class="fa-solid fa-arrow-right ml-2"></i>
+                        ¡Comenzar la aventura! <i class="fa-solid fa-arrow-right ml-2"></i>
                     </button>
                 </div>
             </div>
@@ -212,7 +211,7 @@
 
                         <div class="timeline-item relative flex items-center p-3 border-2 border-transparent bg-gray-50 hover:bg-gray-100 rounded-xl" onclick="showModel('rutherford', this)">
                             <div class="w-10 h-10 rounded-full bg-gray-400 text-white flex items-center justify-center font-bold z-10 shrink-0 text-xs">1911</div>
-                            <div class="ml-4"><h3 class="font-bold text-gray-800">Rutherford</h3><p class="text-xs text-gray-500">Modelo Planetario</p></div>
+                            <div class="ml-4"><h3 class="font-bold text-gray-800">Rutherford</h3><p class="text-xs text-gray-500">Modelo planetario</p></div>
                         </div>
 
                         <div class="timeline-item relative flex items-center p-3 border-2 border-transparent bg-gray-50 hover:bg-gray-100 rounded-xl" onclick="showModel('bohr', this)">
@@ -222,7 +221,7 @@
 
                         <div class="timeline-item relative flex items-center p-3 border-2 border-transparent bg-gray-50 hover:bg-gray-100 rounded-xl" onclick="showModel('actual', this)">
                             <div class="w-10 h-10 rounded-full bg-gray-400 text-white flex items-center justify-center font-bold z-10 shrink-0 text-xs">1926</div>
-                            <div class="ml-4"><h3 class="font-bold text-gray-800">Modelo Actual</h3><p class="text-xs text-gray-500">Nube de electrones</p></div>
+                            <div class="ml-4"><h3 class="font-bold text-gray-800">Modelo actual</h3><p class="text-xs text-gray-500">Nube de electrones</p></div>
                         </div>
 
                     </div>
@@ -245,8 +244,8 @@
             <div class="bg-indigo-50 border-l-4 border-indigo-500 p-4 rounded-r-xl mb-6 flex gap-4 items-start">
                 <i class="fa-solid fa-user-astronaut text-indigo-500 text-xl mt-1"></i>
                 <div>
-                    <h3 class="font-bold text-indigo-800">Instrucciones de la Simulación</h3>
-                    <p class="text-sm text-indigo-700">Fíjate bien en la ubicación de las partículas. Protones y Neutrones están atrapados en el NÚCLEO. Los Electrones viajan libres por la CORTEZA. Modifícalos para ver qué ocurre.</p>
+                    <h3 class="font-bold text-indigo-800">Instrucciones de la simulación</h3>
+                    <p class="text-sm text-indigo-700">Fíjate bien en la ubicación de las partículas. Protones y neutrones están atrapados en el NÚCLEO. Los electrones viajan libres por la CORTEZA. Modifícalos para ver qué ocurre.</p>
                 </div>
             </div>
 
@@ -254,11 +253,11 @@
                 
                 <!-- Constructor (Botones) -->
                 <div class="w-full lg:w-1/2 bg-white rounded-3xl p-6 shadow-sm border border-gray-100">
-                    <h2 class="text-2xl font-bold mb-6 text-gray-800 text-center">Panel de Partículas</h2>
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800 text-center">Panel de partículas</h2>
                     
                     <!-- Protones (AHORA AZULES) -->
                     <div class="flex items-center justify-between bg-blue-50 p-4 rounded-2xl mb-4 border border-blue-100 relative overflow-hidden">
-                        <div class="absolute right-0 top-0 bg-blue-200 text-blue-800 text-[10px] font-bold px-2 py-1 rounded-bl-lg uppercase tracking-wider">Ubicación: NÚCLEO</div>
+                        <div class="absolute right-0 top-0 bg-blue-200 text-blue-800 text-[10px] font-bold px-2 py-1 rounded-bl-lg uppercase tracking-wider">Ubicación: núcleo</div>
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold text-xl">+</div>
                             <div>
@@ -275,12 +274,12 @@
 
                     <!-- Neutrones -->
                     <div class="flex items-center justify-between bg-gray-50 p-4 rounded-2xl mb-4 border border-gray-200 relative overflow-hidden">
-                        <div class="absolute right-0 top-0 bg-gray-200 text-gray-700 text-[10px] font-bold px-2 py-1 rounded-bl-lg uppercase tracking-wider">Ubicación: NÚCLEO</div>
+                        <div class="absolute right-0 top-0 bg-gray-200 text-gray-700 text-[10px] font-bold px-2 py-1 rounded-bl-lg uppercase tracking-wider">Ubicación: núcleo</div>
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded-full bg-gray-500 text-white flex items-center justify-center font-bold text-xl">n</div>
                             <div>
                                 <h3 class="font-bold text-gray-800">Neutrones (n⁰)</h3>
-                                <p class="text-xs text-gray-600">Aportan masa, forman <b>Isótopos</b></p>
+                                <p class="text-xs text-gray-600">Aportan masa, forman isótopos</p>
                             </div>
                         </div>
                         <div class="flex items-center gap-4 bg-white px-4 py-2 rounded-xl shadow-sm z-10">
@@ -292,12 +291,12 @@
 
                     <!-- Electrones (AHORA ROJOS) -->
                     <div class="flex items-center justify-between bg-red-50 p-4 rounded-2xl border border-red-100 relative overflow-hidden">
-                        <div class="absolute right-0 top-0 bg-red-200 text-red-800 text-[10px] font-bold px-2 py-1 rounded-bl-lg uppercase tracking-wider">Ubicación: CORTEZA</div>
+                        <div class="absolute right-0 top-0 bg-red-200 text-red-800 text-[10px] font-bold px-2 py-1 rounded-bl-lg uppercase tracking-wider">Ubicación: corteza</div>
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded-full bg-red-500 text-white flex items-center justify-center font-bold text-xl">-</div>
                             <div>
                                 <h3 class="font-bold text-red-800">Electrones (e⁻)</h3>
-                                <p class="text-xs text-red-600">Si varían, forman <b>Iones</b></p>
+                                <p class="text-xs text-red-600">Si varían, forman iones</p>
                             </div>
                         </div>
                         <div class="flex items-center gap-4 bg-white px-4 py-2 rounded-xl shadow-sm z-10">
@@ -308,7 +307,7 @@
                     </div>
 
                     <div class="mt-6 text-center">
-                        <button onclick="resetAtom()" class="text-sm text-brand-purple underline font-bold hover:text-brand-purpleDark">Resetear a Carbono Neutro</button>
+                        <button onclick="resetAtom()" class="text-sm text-brand-purple underline font-bold hover:text-brand-purpleDark">Resetear a carbono neutro</button>
                     </div>
                 </div>
 
@@ -317,14 +316,14 @@
                     <!-- Decoración fondo -->
                     <i class="fa-solid fa-atom absolute -right-10 -bottom-10 text-9xl text-white opacity-5"></i>
                     
-                    <h2 class="text-xl font-bold mb-1 text-gray-300 uppercase tracking-wider text-center">Análisis del Átomo</h2>
-                    <div id="element-name" class="text-3xl font-black text-center text-yellow-400 mb-4 tracking-wide">CARBONO</div>
+                    <h2 class="text-xl font-bold mb-1 text-gray-300 uppercase tracking-wider text-center">Análisis del átomo</h2>
+                    <div id="element-name" class="text-3xl font-black text-center text-yellow-400 mb-4 tracking-wide uppercase">CARBONO</div>
                     
                     <!-- Representación Simbólica (Notación) -->
                     <div class="flex justify-center items-center mb-6 bg-white/10 rounded-2xl p-4">
                         <div class="flex flex-col items-end mr-2 text-xl font-bold">
-                            <span id="mass-number" class="text-white" title="Número Másico (A)">12</span>
-                            <span id="atomic-number" class="text-white" title="Número Atómico (Z)">6</span>
+                            <span id="mass-number" class="text-white" title="Número másico (A)">12</span>
+                            <span id="atomic-number" class="text-white" title="Número atómico (Z)">6</span>
                         </div>
                         <div id="chemical-symbol" class="chemical-symbol text-6xl font-bold">C</div>
                         <div class="flex flex-col items-start ml-2 text-2xl font-bold h-full justify-start pb-6">
@@ -335,10 +334,10 @@
                     <!-- Cuadro explicativo Z y A -->
                     <div class="bg-[#1a252f] rounded-lg p-3 mb-4 flex gap-4 text-xs text-gray-300 border border-gray-600">
                         <div class="flex-1">
-                            <span class="text-white font-bold">Z (Número Atómico)</span> = <span class="text-blue-400 font-bold">Protones</span>.<br>Es el "DNI" del elemento.
+                            <span class="text-white font-bold">Z (número atómico)</span> = <span class="text-blue-400 font-bold">protones</span>.<br>Es el "DNI" del elemento.
                         </div>
                         <div class="flex-1">
-                            <span class="text-white font-bold">A (Número Másico)</span> = <span class="text-blue-400 font-bold">p⁺</span> + <span class="text-gray-400 font-bold">n⁰</span>.<br>La masa pesada está en el núcleo.
+                            <span class="text-white font-bold">A (número másico)</span> = <span class="text-blue-400 font-bold">p⁺</span> + <span class="text-gray-400 font-bold">n⁰</span>.<br>La masa pesada está en el núcleo.
                         </div>
                     </div>
 
@@ -374,9 +373,9 @@
                         <div class="quiz-question mb-8 border-b pb-6" id="q1">
                             <h3 class="font-bold text-lg mb-3 text-brand-purple">1. Si a un átomo neutro de Litio (Z=3) le quitamos un electrón...</h3>
                             <div class="space-y-2">
-                                <button onclick="checkQuiz(1, false, this, 'Los isótopos se forman al cambiar el número de neutrones en el núcleo, no los electrones de la corteza.')" class="w-full text-left p-3 rounded-lg border border-gray-200 hover:border-brand-purple transition text-sm">A) Se convierte en un Isótopo.</button>
-                                <button onclick="checkQuiz(1, true, this, 'Al perder una carga negativa, los protones (positivos) ganan fuerza y el átomo queda con carga neta positiva.')" class="w-full text-left p-3 rounded-lg border border-gray-200 hover:border-brand-purple transition text-sm">B) Se convierte en un Catión (carga positiva).</button>
-                                <button onclick="checkQuiz(1, false, this, 'Un Anión se forma cuando el átomo GANA electrones, volviéndose más negativo.')" class="w-full text-left p-3 rounded-lg border border-gray-200 hover:border-brand-purple transition text-sm">C) Se convierte en un Anión (carga negativa).</button>
+                                <button onclick="checkQuiz(1, false, this, 'Los isótopos se forman al cambiar el número de neutrones en el núcleo, no los electrones de la corteza.')" class="w-full text-left p-3 rounded-lg border border-gray-200 hover:border-brand-purple transition text-sm">A) Se convierte en un isótopo.</button>
+                                <button onclick="checkQuiz(1, true, this, 'Al perder una carga negativa, los protones (positivos) ganan fuerza y el átomo queda con carga neta positiva.')" class="w-full text-left p-3 rounded-lg border border-gray-200 hover:border-brand-purple transition text-sm">B) Se convierte en un catión (carga positiva).</button>
+                                <button onclick="checkQuiz(1, false, this, 'Un anión se forma cuando el átomo GANA electrones, volviéndose más negativo.')" class="w-full text-left p-3 rounded-lg border border-gray-200 hover:border-brand-purple transition text-sm">C) Se convierte en un anión (carga negativa).</button>
                             </div>
                             <div class="feedback hidden mt-2 p-3 rounded-lg text-sm"></div>
                         </div>
@@ -407,9 +406,9 @@
                         <div class="quiz-question mb-8 border-b pb-6" id="q4">
                             <h3 class="font-bold text-lg mb-3 text-brand-purple">4. ¿Qué partículas se encuentran atrapadas en el núcleo según el laboratorio?</h3>
                             <div class="space-y-2">
-                                <button onclick="checkQuiz(4, false, this, 'Te falta una partícula clave. Los protones no están solos en el núcleo.')" class="w-full text-left p-3 rounded-lg border border-gray-200 hover:border-brand-purple transition text-sm">A) Solo los Protones.</button>
-                                <button onclick="checkQuiz(4, false, this, '¡Cuidado! Los electrones nunca están en el núcleo, se mueven libremente por la corteza exterior.')" class="w-full text-left p-3 rounded-lg border border-gray-200 hover:border-brand-purple transition text-sm">B) Protones y Electrones.</button>
-                                <button onclick="checkQuiz(4, true, this, '¡Correcto! Juntos forman casi el 100% de la masa (peso) del átomo.')" class="w-full text-left p-3 rounded-lg border border-gray-200 hover:border-brand-purple transition text-sm">C) Protones y Neutrones (la masa del átomo).</button>
+                                <button onclick="checkQuiz(4, false, this, 'Te falta una partícula clave. Los protones no están solos en el núcleo.')" class="w-full text-left p-3 rounded-lg border border-gray-200 hover:border-brand-purple transition text-sm">A) Solo los protones.</button>
+                                <button onclick="checkQuiz(4, false, this, '¡Cuidado! Los electrones nunca están en el núcleo, se mueven libremente por la corteza exterior.')" class="w-full text-left p-3 rounded-lg border border-gray-200 hover:border-brand-purple transition text-sm">B) Protones y electrones.</button>
+                                <button onclick="checkQuiz(4, true, this, '¡Correcto! Juntos forman casi el 100% de la masa (peso) del átomo.')" class="w-full text-left p-3 rounded-lg border border-gray-200 hover:border-brand-purple transition text-sm">C) Protones y neutrones (la masa del átomo).</button>
                             </div>
                             <div class="feedback hidden mt-2 p-3 rounded-lg text-sm"></div>
                         </div>
@@ -418,8 +417,8 @@
                         <div class="quiz-question" id="q5">
                             <h3 class="font-bold text-lg mb-3 text-brand-purple">5. El número atómico (Z) de un elemento indica...</h3>
                             <div class="space-y-2">
-                                <button onclick="checkQuiz(5, true, this, '¡Muy bien! Si cambias los protones (Z), dejas de tener ese elemento y pasas a tener otro distinto.')" class="w-full text-left p-3 rounded-lg border border-gray-200 hover:border-brand-purple transition text-sm">A) La cantidad exacta de Protones. Define de qué elemento se trata.</button>
-                                <button onclick="checkQuiz(5, false, this, 'No, la suma de Protones + Neutrones es el Número Másico (representado por la letra A).')" class="w-full text-left p-3 rounded-lg border border-gray-200 hover:border-brand-purple transition text-sm">B) La suma de Protones y Neutrones.</button>
+                                <button onclick="checkQuiz(5, true, this, '¡Muy bien! Si cambias los protones (Z), dejas de tener ese elemento y pasas a tener otro distinto.')" class="w-full text-left p-3 rounded-lg border border-gray-200 hover:border-brand-purple transition text-sm">A) La cantidad exacta de protones. Define de qué elemento se trata.</button>
+                                <button onclick="checkQuiz(5, false, this, 'No, la suma de protones + neutrones es el número másico (representado por la letra A).')" class="w-full text-left p-3 rounded-lg border border-gray-200 hover:border-brand-purple transition text-sm">B) La suma de protones y neutrones.</button>
                                 <button onclick="checkQuiz(5, false, this, 'Las órbitas o niveles de energía tienen que ver con los electrones y la configuración electrónica, no con la letra Z.')" class="w-full text-left p-3 rounded-lg border border-gray-200 hover:border-brand-purple transition text-sm">C) La cantidad de órbitas de Bohr que tiene.</button>
                             </div>
                             <div class="feedback hidden mt-2 p-3 rounded-lg text-sm"></div>
@@ -436,12 +435,12 @@
                         
                         <div class="space-y-4">
                             <div>
-                                <label class="block text-xs font-bold text-purple-200 mb-1 uppercase tracking-wide">Tu Pregunta / Duda:</label>
+                                <label class="block text-xs font-bold text-purple-200 mb-1 uppercase tracking-wide">Tu pregunta / duda:</label>
                                 <textarea id="student-question" rows="4" class="w-full rounded-xl p-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-400 placeholder-gray-400 text-sm" placeholder="Profesor, no entiendo muy bien la diferencia entre el modelo de Rutherford y el de Bohr..."></textarea>
                             </div>
                             
                             <button onclick="sendEmail()" class="w-full bg-white text-brand-purple font-bold py-3 rounded-xl hover:bg-gray-100 transition shadow-md flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-paper-plane"></i> Enviar Duda
+                                <i class="fa-solid fa-paper-plane"></i> Enviar duda
                             </button>
                             <div id="mail-msg" class="hidden text-xs font-bold text-center mt-2 bg-white/20 p-2 rounded"></div>
                         </div>
@@ -473,16 +472,16 @@
             const sub = document.getElementById('page-subtitle');
             
             if(tabId === 'inicio') {
-                title.innerText = "Bienvenido al Laboratorio";
+                title.innerText = "Bienvenido al laboratorio";
                 sub.innerText = "Sigue los pasos para completar la unidad.";
             } else if(tabId === 'historia') {
-                title.innerText = "Historia del Átomo";
+                title.innerText = "Historia del átomo";
                 sub.innerText = "Evolución de los modelos atómicos a lo largo del tiempo.";
             } else if (tabId === 'laboratorio') {
-                title.innerText = "Laboratorio de Isótopos e Iones";
+                title.innerText = "Laboratorio de isótopos e iones";
                 sub.innerText = "Experimenta con las partículas subatómicas interactivamente.";
             } else {
-                title.innerText = "Reto Final y Contacto";
+                title.innerText = "Reto final y contacto";
                 sub.innerText = "Comprueba lo aprendido y envía tus dudas al profesor.";
             }
         }
@@ -491,7 +490,7 @@
         const modelosData = {
             democrito: {
                 nombre: "Demócrito y Leucipo", fecha: "Aprox. 400 a.C.",
-                desc: "Filósofos griegos que postularon que la materia no podía dividirse infinitamente. Llegaría un punto en el que se obtendría una partícula a la que llamaron <b>Átomo</b> (del griego 'a-tomon': sin división).",
+                desc: "Filósofos griegos que postularon que la materia no podía dividirse infinitamente. Llegaría un punto en el que se obtendría una partícula a la que llamaron <b>átomo</b> (del griego 'a-tomon': sin división).",
                 aportacion: "Fueron los primeros en imaginar un límite a la divisibilidad de la materia.",
                 fallo: "No era un modelo científico. Basado en razonamiento filosófico, no en experimentación.",
                 imagenHTML: "<img src='https://quimica4toescuelatecnica.wordpress.com/wp-content/uploads/2018/04/modelo-atomico-democrito.jpg' class='w-full h-full object-contain p-2' alt='Demócrito'>"
@@ -505,31 +504,31 @@
             },
             thomson: {
                 nombre: "J.J. Thomson", fecha: "1897",
-                desc: "Descubre el <b>electrón</b> (carga negativa) usando tubos de rayos catódicos. Al saber que el átomo es neutro, deduce que debe haber algo positivo. Propone el modelo del <b>'Pudin de pasas'</b>: una masa esférica positiva con electrones incrustados.",
+                desc: "Descubre el <b>electrón</b> (carga negativa) usando tubos de rayos catódicos. Al saber que el átomo es neutro, deduce que debe haber algo positivo. Propone el modelo del <b>pudin de pasas</b>: una masa esférica positiva con electrones incrustados.",
                 aportacion: "Derriba el mito de que el átomo es indivisible. Descubre la primera partícula subatómica (electrón).",
                 fallo: "El modelo era estático. Asumía que la carga positiva estaba repartida uniformemente por todo el átomo, sin núcleo.",
                 imagenHTML: "<img src='https://rinconeducativo.org/wp-content/uploads/2020/08/Thomson_Joseph_Pudin-pasas.png' class='w-full h-full object-contain p-2' alt='Thomson'>"
             },
             rutherford: {
                 nombre: "Ernest Rutherford", fecha: "1911",
-                desc: "Realiza el experimento de la lámina de oro. Descubre que casi todas las partículas la atraviesan sin desviarse, demostrando que <b>la mayor parte del átomo está vacía</b>. Nace el modelo 'planetario'.",
-                aportacion: "Descubre el <b>Núcleo Atómico</b>: minúsculo, denso y positivo. Ubica los electrones girando lejos en la corteza.",
+                desc: "Realiza el experimento de la lámina de oro. Descubre que casi todas las partículas la atraviesan sin desviarse, demostrando que <b>la mayor parte del átomo está vacía</b>. Nace el modelo planetario.",
+                aportacion: "Descubre el <b>núcleo atómico</b>: minúsculo, denso y positivo. Ubica los electrones girando lejos en la corteza.",
                 fallo: "Según la física clásica, un electrón girando pierde energía y acabaría estrellándose contra el núcleo. Su átomo era mecánicamente inestable.",
                 imagenHTML: "<img src='https://definicion.com/wp-content/uploads/2022/09/modeloatomico.png' class='w-full h-full object-contain p-2' alt='Rutherford'>"
             },
             bohr: {
                 nombre: "Niels Bohr", fecha: "1913",
                 desc: "Solucionó la inestabilidad de Rutherford aplicando la teoría cuántica de Planck. Propuso que los electrones no giran en cualquier lugar al azar, sino en trayectorias estables permitidas.",
-                aportacion: "Introduce las <b>Órbitas cuantizadas (Niveles de Energía)</b>. Un electrón solo emite/absorbe luz cuando salta de un nivel a otro.",
-                fallo: "Sus cálculos solo funcionaban a la perfección para el átomo más sencillo: el Hidrógeno. Fallaba con átomos más grandes.",
+                aportacion: "Introduce las <b>órbitas cuantizadas (niveles de energía)</b>. Un electrón solo emite/absorbe luz cuando salta de un nivel a otro.",
+                fallo: "Sus cálculos solo funcionaban a la perfección para el átomo más sencillo: el hidrógeno. Fallaba con átomos más grandes.",
                 imagenHTML: "<img src='https://portalacademico.cch.unam.mx/materiales/al/cont/exp/qui/qui1/u2/mod_atomicos/img/q1u2oa10i21.jpg' class='w-full h-full object-contain p-2' alt='Bohr'>"
             },
             actual: {
-                nombre: "Modelo Mecano-Cuántico", fecha: "1926 - Actualidad",
-                desc: "Desarrollado por Schrödinger y Heisenberg. Abandona la idea de 'órbitas' definidas porque es imposible saber la posición y velocidad exacta del electrón (Principio de Incertidumbre).",
-                aportacion: "Propone los <b>Orbitales Atómicos</b> (nubes de probabilidad). Trata al electrón no solo como partícula, sino como onda.",
-                fallo: "", // No ponemos fallo por ser el modelo aceptado a este nivel
-                imagenHTML: "<img src='https://cdn.todamateria.com/imagenes/orbitals-2146393-1920-cke.jpg' class='w-full h-full object-contain p-2 rounded-xl' alt='Modelo Actual'>"
+                nombre: "Modelo mecano-cuántico", fecha: "1926 - Actualidad",
+                desc: "Desarrollado por Schrödinger y Heisenberg. Abandona la idea de órbitas definidas porque es imposible saber la posición y velocidad exacta del electrón (Principio de Incertidumbre).",
+                aportacion: "Propone los <b>orbitales atómicos</b> (nubes de probabilidad). Trata al electrón no solo como partícula, sino como onda.",
+                fallo: "", 
+                imagenHTML: "<img src='https://cdn.todamateria.com/imagenes/orbitals-2146393-1920-cke.jpg' class='w-full h-full object-contain p-2 rounded-xl' alt='Modelo actual'>"
             }
         };
 
@@ -556,12 +555,12 @@
                         </div>
                         ${data.aportacion ? `
                         <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg mt-2 shadow-sm">
-                            <h4 class="font-bold text-green-800 text-sm"><i class="fa-solid fa-lightbulb mr-2"></i>Aportación / Novedad</h4>
+                            <h4 class="font-bold text-green-800 text-sm"><i class="fa-solid fa-lightbulb mr-2"></i>Aportación / novedad</h4>
                             <p class="text-xs text-green-700 mt-1">${data.aportacion}</p>
                         </div>` : ''}
                         ${data.fallo ? `
                         <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg mt-2 shadow-sm">
-                            <h4 class="font-bold text-red-800 text-sm"><i class="fa-solid fa-triangle-exclamation mr-2"></i>Fallo / Limitación</h4>
+                            <h4 class="font-bold text-red-800 text-sm"><i class="fa-solid fa-triangle-exclamation mr-2"></i>Fallo / limitación</h4>
                             <p class="text-xs text-red-700 mt-1">${data.fallo}</p>
                         </div>` : ''}
                     </div>
@@ -573,25 +572,24 @@
             document.getElementById('model-content').innerHTML = contentHTML;
         }
 
-        // Iniciar con Demócrito oculto en UI pero renderizado, o solo inicial
         showModel('democrito', document.querySelector('.timeline-item'));
 
 
         /* --- LÓGICA: CONSTRUCTOR DE IONES E ISÓTOPOS --- */
-        let state = { p: 6, n: 6, e: 6 }; // Empezamos con Carbono 12 neutro
+        let state = { p: 6, n: 6, e: 6 }; 
         
         const elementos = [
-            { nombre: "Vacío (No existe)", sim: "" }, // 0
-            { nombre: "Hidrógeno", sim: "H" }, // 1
-            { nombre: "Helio", sim: "He" },    // 2
-            { nombre: "Litio", sim: "Li" },    // 3
-            { nombre: "Berilio", sim: "Be" },  // 4
-            { nombre: "Boro", sim: "B" },      // 5
-            { nombre: "Carbono", sim: "C" },   // 6
-            { nombre: "Nitrógeno", sim: "N" }, // 7
-            { nombre: "Oxígeno", sim: "O" },   // 8
-            { nombre: "Flúor", sim: "F" },     // 9
-            { nombre: "Neón", sim: "Ne" }      // 10
+            { nombre: "Vacío (No existe)", sim: "" },
+            { nombre: "Hidrógeno", sim: "H" },
+            { nombre: "Helio", sim: "He" },
+            { nombre: "Litio", sim: "Li" },
+            { nombre: "Berilio", sim: "Be" },
+            { nombre: "Boro", sim: "B" },
+            { nombre: "Carbono", sim: "C" },
+            { nombre: "Nitrógeno", sim: "N" },
+            { nombre: "Oxígeno", sim: "O" },
+            { nombre: "Flúor", sim: "F" },
+            { nombre: "Neón", sim: "Ne" }
         ];
 
         function updateAtom(particle, amount) {
@@ -637,20 +635,20 @@
             const divIsotope = document.getElementById('status-isotope');
 
             if (charge === 0) {
-                divIon.innerHTML = `<span class="text-green-400 font-bold uppercase text-sm tracking-wide"><i class="fa-solid fa-scale-balanced"></i> Átomo Neutro</span><p class="text-[13px] text-gray-300 mt-1">Los protones azules (+) y los electrones rojos (-) están equilibrados (${state.p} de cada). Carga = 0.</p>`;
+                divIon.innerHTML = `<span class="text-green-400 font-bold uppercase text-sm tracking-wide"><i class="fa-solid fa-scale-balanced"></i> Átomo neutro</span><p class="text-[13px] text-gray-300 mt-1">Los protones azules (+) y los electrones rojos (-) están equilibrados (${state.p} de cada). Carga = 0.</p>`;
             } else if (charge > 0) {
-                divIon.innerHTML = `<span class="text-red-400 font-bold uppercase text-sm tracking-wide"><i class="fa-solid fa-plus-circle"></i> Catión (Ión Positivo)</span><p class="text-[13px] text-gray-300 mt-1">Tiene menos electrones rojos (${state.e}) que protones azules (${state.p}). Gana la fuerza positiva.</p>`;
+                divIon.innerHTML = `<span class="text-red-400 font-bold uppercase text-sm tracking-wide"><i class="fa-solid fa-plus-circle"></i> Catión (ión positivo)</span><p class="text-[13px] text-gray-300 mt-1">Tiene menos electrones rojos (${state.e}) que protones azules (${state.p}). Gana la fuerza positiva.</p>`;
             } else {
-                divIon.innerHTML = `<span class="text-blue-400 font-bold uppercase text-sm tracking-wide"><i class="fa-solid fa-minus-circle"></i> Anión (Ión Negativo)</span><p class="text-[13px] text-gray-300 mt-1">Tiene exceso de electrones rojos (${state.e}). Al ganar partículas negativas, el átomo se carga negativamente.</p>`;
+                divIon.innerHTML = `<span class="text-blue-400 font-bold uppercase text-sm tracking-wide"><i class="fa-solid fa-minus-circle"></i> Anión (ión negativo)</span><p class="text-[13px] text-gray-300 mt-1">Tiene exceso de electrones rojos (${state.e}). Al ganar partículas negativas, el átomo se carga negativamente.</p>`;
             }
 
             const masaTipica = [0, 1, 4, 7, 9, 11, 12, 14, 16, 19, 20]; 
             const aTipico = masaTipica[Z];
 
             if (A === aTipico) {
-                divIsotope.innerHTML = `<span class="text-gray-300 font-bold text-sm tracking-wide"><i class="fa-solid fa-bullseye text-gray-400"></i> Isótopo Común (${elementoActual.sim}-${A})</span><p class="text-[13px] text-gray-400 mt-1">Masa habitual en la naturaleza.</p>`;
+                divIsotope.innerHTML = `<span class="text-gray-300 font-bold text-sm tracking-wide"><i class="fa-solid fa-bullseye text-gray-400"></i> Isótopo común (${elementoActual.sim}-${A})</span><p class="text-[13px] text-gray-400 mt-1">Masa habitual en la naturaleza.</p>`;
             } else {
-                divIsotope.innerHTML = `<span class="text-yellow-400 font-bold text-sm tracking-wide"><i class="fa-solid fa-triangle-exclamation"></i> Isótopo Raro (${elementoActual.sim}-${A})</span><p class="text-[13px] text-yellow-100/70 mt-1">El número de neutrones es inusual. El elemento (Z) sigue siendo el mismo, pero su peso (A) cambia.</p>`;
+                divIsotope.innerHTML = `<span class="text-yellow-400 font-bold text-sm tracking-wide"><i class="fa-solid fa-triangle-exclamation"></i> Isótopo raro (${elementoActual.sim}-${A})</span><p class="text-[13px] text-yellow-100/70 mt-1">El número de neutrones es inusual. El elemento (Z) sigue siendo el mismo, pero su peso (A) cambia.</p>`;
             }
         }
 
@@ -703,19 +701,17 @@
 
             // Crear el enlace mailto
             const correoDestino = "xlizeagurd@educacion.navarra.es";
-            const asunto = "Duda Laboratorio Virtual Física y Química";
+            const asunto = "Duda laboratorio virtual Física y Química";
             const cuerpoMensaje = `Hola profesor,%0D%0A%0D%0ATengo una duda con respecto al Laboratorio Virtual:%0D%0A%0D%0A"${questionText}"%0D%0A%0D%0AUn saludo.`;
             
             const mailtoLink = `mailto:${correoDestino}?subject=${asunto}&body=${cuerpoMensaje}`;
             
-            // Redirigir para abrir el cliente de correo
             window.location.href = mailtoLink;
             
-            // Mensaje de éxito en la web
             msgDiv.innerText = "¡Hecho! Se ha abierto tu aplicación de correo para que envíes el mensaje.";
             msgDiv.classList.remove('hidden', 'text-yellow-300');
             msgDiv.classList.add('text-white');
-            document.getElementById('student-question').value = ''; // Limpiar textarea
+            document.getElementById('student-question').value = ''; 
         }
     </script>
 </body>
